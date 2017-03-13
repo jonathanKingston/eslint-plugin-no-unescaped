@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-unsafe-property-assignment",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check for unsafe property assignement issues in code",
   "main": "index.js",
   "scripts": {
