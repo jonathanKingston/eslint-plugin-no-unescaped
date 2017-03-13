@@ -1,0 +1,21 @@
+{
+  "name": "eslint-plugin-unsafe-property-assignment",
+  "version": "1.0.0",
+  "description": "Check for unsafe property assignement issues in code",
+  "main": "index.js",
+  "scripts": {
+    "test": "test/index.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin"
+  ],
+  "author": "Jonathan Kingston",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=0.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1"
+  }
+}
