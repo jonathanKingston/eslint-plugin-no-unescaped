@@ -1,10 +1,10 @@
 {
-  "name": "eslint-plugin-unsafe-property-assignment",
+  "name": "eslint-plugin-no-unescaped",
   "version": "1.0.3",
-  "description": "Check for unsafe property assignement issues in code",
+  "description": "Check for unsafe dom issues in code",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha tests --recursive"
   },
   "keywords": [
     "eslint",
@@ -14,11 +14,11 @@
   "author": "Jonathan Kingston",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanKingston/eslint-plugin-unsafe-property-assignment.git"
+    "url": "https://github.com/jonathanKingston/eslint-plugin-no-unescaped.git"
   },
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.0.0",
-    "mocha": "^2.5.3"
+    "mocha": "^3.2.0"
   }
 }

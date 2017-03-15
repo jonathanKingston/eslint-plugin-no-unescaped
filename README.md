@@ -1,4 +1,4 @@
-# eslint-plugin-unsafe-property-assignment
+# eslint-plugin-no-unescaped
 
 Checks for the following unsafe property assignement issues in code:
 
@@ -17,7 +17,7 @@ Configure eslint like this:
 ```
 
 
-## enforce-tagged-template-protection
+## enforce
 
 
 ```
@@ -29,8 +29,45 @@ This prevents assigning variables from user input into known capabilities that a
 Configure eslint like this:
 
 ```
-  "unsafe-property-assignment/enforce-tagged-template-protection": ["error", {innerHTML: ["escaped"]}]
+  "unsafe-property-assignment/enforce-tagged-template-protection": ["error",
+    {
+      html: {
+        taggedTemplates: ["escaped"],
+        methods: ["escapeHTML"]
+      },
+    },
+    {
+      properties: {
+        innerHTML: {
+          type: "html"
+        },
+        outerHTML: {
+          type: "html"
+        },
+      },
+      methods: {
+        insertAdjacentHTML: {
+          type: "html",
+          properties: [1]
+        },
+        writeln: {
+          type: "html",
+          properties: [0]
+        },
+        write: {
+          type: "html",
+          properties: [0]
+        },
+        createContextualFragment: {
+          type: "html",
+          properties: [0]
+        }
+      }
+    }
+  ]
 ```
+
+The above is the default setup for the rule, the second and third argument can be ignored for the default setup.
 
 This permits the use of tagged template strings where the function permitted is used to regulate unsafe strings and escape them.
 

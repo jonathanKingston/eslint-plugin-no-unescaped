@@ -18,6 +18,26 @@ ruleTester.run(ruleName, rule, {
       errors: [ { message: "Unexpected string assignment of key innerHTML." } ]
     },
     {
+      code: "const string1 = 'outerHTML';",
+      errors: [ { message: "Unexpected string assignment of key outerHTML." } ]
+    },
+    {
+      code: "const string1 = 'insertAdjacentHTML';",
+      errors: [ { message: "Unexpected string assignment of key insertAdjacentHTML." } ]
+    },
+    {
+      code: "const string1 = 'writeln';",
+      errors: [ { message: "Unexpected string assignment of key writeln." } ]
+    },
+    {
+      code: "const string1 = 'write';",
+      errors: [ { message: "Unexpected string assignment of key write." } ]
+    },
+    {
+      code: "const string1 = 'createContextualFragment';",
+      errors: [ { message: "Unexpected string assignment of key createContextualFragment." } ]
+    },
+    {
       code: "let string0; string0 = \"innerHTML\";",
       errors: [ { message: "Unexpected string assignment of key innerHTML." } ]
     },

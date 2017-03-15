@@ -3,13 +3,13 @@
 module.exports = {
   rules: {
     "no-key-assignment": require("./lib/rules/no-key-assignment"),
-    "enforce-tagged-template-protection": require("./lib/rules/enforce-tagged-template-protection")
+    "enforce": require("./lib/rules/enforce")
   },
   configs: {
     recommended: {
       rules: {
-        "unsafe-property-assignment/no-key-assignment": ["error"],
-        "unsafe-property-assignment/enforce-tagged-template-protection": ["error"]
+        "no-unescaped/no-key-assignment": ["error"],
+        "no-unescaped/enforce": ["error"]
       }
     }
   }
