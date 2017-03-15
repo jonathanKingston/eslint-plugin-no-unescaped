@@ -50,6 +50,9 @@ ruleTester.run(ruleName, rule, {
     setupString + " myEl.innerHTML = 12;",
     "a.innerHTML = '';",
     "c.innerHTML = ``;",
+    "me.prototype.constructor = '@';",
+    "class me { constructor() {super();}}",
+    "me.prototype = '@';",
     {
       code: "g.innerHTML = Sanitizer.escapeHTML``;",
       options: [defaultSetup]

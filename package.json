@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-unescaped",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "description": "Check for unsafe dom issues in code",
   "main": "index.js",
   "scripts": {
