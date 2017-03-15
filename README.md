@@ -8,12 +8,12 @@ Checks for the following unsafe property assignement issues in code:
   const me = "innerHTML";
 ```
 
-This prevents key usage of variables to access unsafe properties and bypassing the `enforce-tagged-template-protection` rule. This isn't fool proof either however should catch accidental usage of this capability.
+This prevents key usage of variables to access unsafe properties and bypassing the `enforce` rule. This isn't fool proof either however should catch accidental usage of this capability.
 
 Configure eslint like this:
 
 ```
-  "unsafe-property-assignment/no-key-assignment": ["error", ["innerHTML"]]
+  "no-unescaped/no-key-assignment": ["error", ["innerHTML"]]
 ```
 
 
@@ -29,7 +29,7 @@ This prevents assigning variables from user input into known capabilities that a
 Configure eslint like this:
 
 ```
-  "unsafe-property-assignment/enforce-tagged-template-protection": ["error",
+  "no-unescaped/enforce": ["error",
     {
       html: {
         taggedTemplates: ["escaped"],
