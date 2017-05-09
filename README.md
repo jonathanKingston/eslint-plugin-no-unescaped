@@ -1,3 +1,9 @@
+# DEPRECATED DO NOT USE
+
+Use https://www.npmjs.com/package/eslint-plugin-no-unsanitized instead, thanks!.
+
+**No further changes are planned here**
+
 # eslint-plugin-no-unescaped
 
 Checks for the following unsafe property assignement issues in code:
